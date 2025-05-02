@@ -21,7 +21,7 @@
 
 - **개발 언어**: Java  
 - **개발 환경**: Android Studio (Gradle)  
-- **아키텍처**: MVVM  
+- **아키텍처**: MVC
 - **API**: OpenWeatherMap API  
 - **버전 관리**: Git / GitHub  
 - **디자인**: Material Design, White Theme UI
@@ -41,7 +41,38 @@
 
 ---
 
-## 🚀 사용 방법
+## 📁 프로젝트 구조
+WeatherPick/
+│
+├── app/
+│ ├── java/com/weatherpick/
+│ │ ├── model/ # 데이터 모델 클래스
+│ │ ├── view/ # 액티비티 및 UI 클래스
+│ │ ├── viewmodel/ # 뷰모델 로직
+│ │ └── network/ # API 통신 관련 클래스
+│ └── res/ # 리소스 (layout, drawable, values 등)
+│
+├── build.gradle
+└── README.md
 
-1. Android Studio에서 프로젝트 열기  
-2. `local.properties` 파일에 본인의 OpenWeather API 키 입력  
+
+---
+
+## 🧑‍💻 팀 소개
+
+- 추현민 (팀장, 개발 및 API 연동)
+- 팀원 A (UI 디자인)
+- 팀원 B (알림 기능 개발)
+- 팀원 C (날씨-의상 추천 알고리즘)
+- 팀원 D (테스트 및 문서화)
+
+---
+
+## 📌 향후 계획
+
+
+---
+
+## 📄 라이선스
+
+MIT License © 2025 Weather Pick Team
