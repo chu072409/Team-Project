@@ -1,0 +1,10 @@
+# Android stuff
+*.iml
+.gradle/
+local.properties
+.idea/
+build/
+.caches/
+
+# macOS
+.DS_Store
