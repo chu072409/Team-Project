@@ -1,5 +1,0 @@
-<!-- bg_circle_gray.xml -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <solid android:color="#F2F2F2" />
-</shape>
