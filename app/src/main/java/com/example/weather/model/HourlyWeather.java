@@ -1,7 +1,7 @@
 package com.example.weather.model;
 
 import com.example.weather.utils.WeatherUtils;
-
+//test
 public class HourlyWeather {
     private String time;
     private String iconCode;

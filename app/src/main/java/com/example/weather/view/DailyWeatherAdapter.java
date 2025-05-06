@@ -15,7 +15,7 @@ import com.example.weather.model.Weather;
 import com.example.weather.utils.WeatherUtils;
 
 import java.util.List;
-
+//test
 // DailyWeatherAdapter.java
 public class DailyWeatherAdapter extends RecyclerView.Adapter<DailyWeatherAdapter.DailyViewHolder> {
 

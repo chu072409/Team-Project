@@ -3,7 +3,7 @@ package com.example.weather.utils;
 import com.example.weather.R;
 
 public class WeatherUtils {
-
+    //test
     public static int getWeatherSymbolResource(String iconCode) {
         switch (iconCode) {
             case "01d": return R.drawable.sun_max;

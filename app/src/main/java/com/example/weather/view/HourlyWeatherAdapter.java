@@ -19,7 +19,7 @@ import java.util.List;
 public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdapter.HourlyViewHolder> {
 
     private List<HourlyWeather> hourlyList;
-
+    //test
     // 생성자에서 List<HourlyWeather> 인자를 받도록 수정
     public HourlyWeatherAdapter(List<HourlyWeather> hourlyList) {
         this.hourlyList = hourlyList;

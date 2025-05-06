@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         weatherIcon = findViewById(R.id.weatherIcon);
         hourlyRecyclerView = findViewById(R.id.hourlyRecyclerView);
         dailyRecyclerView = findViewById(R.id.dailyRecyclerView);
-
+//test
         // 어댑터 초기화
         hourlyWeatherAdapter = new HourlyWeatherAdapter(new ArrayList<>());
         dailyWeatherAdapter = new DailyWeatherAdapter(new ArrayList<>());

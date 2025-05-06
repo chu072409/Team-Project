@@ -1,7 +1,7 @@
 package com.example.weather.model;
 
 import java.util.List;
-
+//test
 public class HourlyWeatherResponse {
     private List<HourlyData> list;
 
