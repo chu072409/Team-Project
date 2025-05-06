@@ -178,4 +178,5 @@ public class HomeActivity extends AppCompatActivity {
     private void updateDailyWeatherUI(List<DailyWeather> dailyWeatherList) {
         dailyWeatherAdapter.updateDailyWeather(dailyWeatherList);
     }
+    //
 }
