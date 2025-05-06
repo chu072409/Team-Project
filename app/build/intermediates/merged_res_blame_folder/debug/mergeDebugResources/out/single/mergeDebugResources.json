@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/layout_activity_main.xml.flat",
+        "source": "com.example.weather.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_fog.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_fog.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_sun_rain.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_sun_rain.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_moon.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_moon.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/layout_item_daily_weather.xml.flat",
+        "source": "com.example.weather.app-main-38:/layout/item_daily_weather.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_moon_stars.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/moon_stars.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_heavyrain.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_heavyrain.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.weather.app-main-38:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_bg_circle_shadow.xml.flat",
+        "source": "com.example.weather.app-main-38:/drawable/bg_circle_shadow.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_snow.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_snow.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_sun_max.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/sun_max.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_bg_weather_card.xml.flat",
+        "source": "com.example.weather.app-main-38:/drawable/bg_weather_card.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/xml_backup_rules.xml.flat",
+        "source": "com.example.weather.app-main-38:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_smoke.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/smoke.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/layout_item_hourly_weather.xml.flat",
+        "source": "com.example.weather.app-main-38:/layout/item_hourly_weather.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_bg_circle_gray.xml.flat",
+        "source": "com.example.weather.app-main-38:/drawable/bg_circle_gray.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.weather.app-main-38:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_bolt_rain.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_bolt_rain.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.weather.app-main-38:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_moon_rain.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_moon_rain.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/drawable_cloud_sun.png.flat",
+        "source": "com.example.weather.app-main-38:/drawable/cloud_sun.png"
+    },
+    {
+        "merged": "com.example.weather.app-debug-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.weather.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
+    }
+]
