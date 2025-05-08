@@ -1,7 +1,7 @@
 package com.example.weather.model;
 
 import java.util.List;
-//test1
+//test12
 public class CurrentWeatherResponse {
     private String name;
     private Main main;
