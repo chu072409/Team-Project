@@ -1,7 +1,7 @@
 package com.example.weather.model;
 
 import com.example.weather.utils.WeatherUtils;
-//test
+//test-2
 public class DailyWeather {
     private String date;
     private String iconCode;
