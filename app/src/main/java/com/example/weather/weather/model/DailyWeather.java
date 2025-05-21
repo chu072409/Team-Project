@@ -1,22 +1,22 @@
-package com.example.weather.model;
+package com.example.weather.weather.model;
 
 import com.example.weather.utils.WeatherUtils;
 
-public class HourlyWeather {
-    private String time;
+public class DailyWeather {
+    private String date;
     private String iconCode;
     private String weatherDescription;
     private int temperature;
 
-    public HourlyWeather(String time, int temperature, String iconCode) {
-        this.time = time;
+    public DailyWeather(String date, int temperature, String iconCode, String weatherDescription) {
+        this.date = date;
         this.temperature = temperature;
         this.iconCode = iconCode;
-        this.weatherDescription = WeatherUtils.getWeatherDescription(iconCode);  // 아이콘 기반 설명
+        this.weatherDescription = WeatherUtils.getWeatherDescription(iconCode);  // 날씨 설명 추가
     }
 
-    public String getTime() {
-        return time;
+    public String getDate() {
+        return date;
     }
 
     public int getTemperature() {
