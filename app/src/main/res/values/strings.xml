@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="title_settings">사용자 설정</string>
+    <string name="btn_basic_info">기본 정보</string>
+    <string name="btn_notification">알람</string>
+    <string name="btn_body_type">체형</string>
+    <string name="btn_style_pref">선호 스타일</string>
 </resources>

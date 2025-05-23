@@ -24,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.UserSettingsActivity" />
+        <activity android:name=".view.NotificationSettingsActivity"/>
+        <activity android:name=".view.BasicInfoActivity"/>
+
+
     </application>
 
 </manifest>

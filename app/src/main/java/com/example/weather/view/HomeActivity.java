@@ -24,7 +24,7 @@ import com.example.weather.model.DailyWeather;
 import com.example.weather.utils.WeatherUtils;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -99,6 +99,10 @@ public class HomeActivity extends AppCompatActivity {
 
         // 시간 자동 업데이트
         startUpdatingTime();
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        bottomNav.setSelectedItemId(R.id.nav_home); // 현재 탭 강조
+        BottomNav.setup(bottomNav, this); // 공통 핸들러 호출
     }
 
     // 날짜, 시간 표시 업데이트
