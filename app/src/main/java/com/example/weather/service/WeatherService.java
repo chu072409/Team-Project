@@ -59,16 +59,34 @@ public class WeatherService {
                 if (response.isSuccessful()) {
                     List<HourlyWeatherResponse.HourlyData> list = response.body().getList();
 
+                    // ✅ 현재 시간 이후만 필터링
+                    long now = System.currentTimeMillis() / 1000L; // 현재 시각(초)
+
                     List<HourlyWeather> hourlyWeatherList = new ArrayList<>();
                     for (HourlyWeatherResponse.HourlyData data : list) {
                         long timestamp = data.getDt();
+
+                        if (timestamp < now) continue; // 과거는 스킵
+
                         String time = convertTimestampToTime(timestamp); // 예: "오전 9시"
                         String iconCode = data.getWeather().get(0).getIcon();
                         int temperature = (int) data.getMain().getTemp();
 
-                        // ✅ description 제거하고 iconCode 기반 설명으로 처리
                         hourlyWeatherList.add(new HourlyWeather(time, temperature, iconCode));
                     }
+
+                    // ✅ 시간순 정렬
+                    hourlyWeatherList.sort((a, b) -> {
+                        try {
+                            SimpleDateFormat sdf = new SimpleDateFormat("a h시", Locale.KOREA);
+                            Date d1 = sdf.parse(a.getTime());
+                            Date d2 = sdf.parse(b.getTime());
+                            return d1.compareTo(d2);
+                        } catch (Exception e) {
+                            return 0;
+                        }
+                    });
+
                     callback.onSuccess(hourlyWeatherList);
                 } else {
                     callback.onFailure();
@@ -80,7 +98,6 @@ public class WeatherService {
                 callback.onFailure();
             }
         });
-
     }
 
     private String convertTimestampToTime(long timestamp) {
