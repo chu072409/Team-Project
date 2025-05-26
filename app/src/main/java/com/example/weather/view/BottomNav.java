@@ -13,8 +13,8 @@ public class BottomNav {
         bottomNav.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
 
-            if (itemId == R.id.nav_settings && !(activity instanceof UserSettingsActivity)) {
-                activity.startActivity(new Intent(activity, UserSettingsActivity.class));
+            if (itemId == R.id.nav_settings && !(activity instanceof SettingActivity)) {
+                activity.startActivity(new Intent(activity, SettingActivity.class));
                 return true;
             }
 

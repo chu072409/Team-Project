@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- 상단 바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/back_arrow"
+            android:layout_centerVertical="true"
+            android:contentDescription="뒤로가기 버튼" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프로필 수정"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- 스크롤 가능한 입력 폼 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 이름 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="이름을 입력하세요"
+                android:inputType="textPersonName"
+                android:background="@android:drawable/edit_text" />
+
+
+            <!-- 생년월일 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edit_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="YYYY-MM-DD"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- 성별 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/radio_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="남성" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="여성"
+                    android:layout_marginStart="48dp" />
+            </RadioGroup>
+
+            <!-- 직무 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="직무"
+                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/edit_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="예: 학생, 직장인 등"
+                android:inputType="text"
+                android:background="@android:drawable/edit_text" />
+
+            <!-- 저장 버튼 -->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:layout_marginTop="24dp"
+                android:background="#d3d3d3" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
