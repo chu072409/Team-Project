@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- 상단 좌측: 뒤로 가기 버튼 -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="←"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:background="#F8F8F8"
+        android:padding="12dp"
+        style="@null" />
+
+    <!-- 상단 우측: 이미지 추가 원형 버튼 -->
+    <Button
+        android:id="@+id/btnAddImage"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:text="+"
+        android:textSize="28sp"
+        android:textColor="#000000"
+        android:background="@drawable/gray_circle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        style="@null" />
+
+    <!-- 카테고리 탭: 전체 → 아우터 → 상의 → 하의 → 신발 -->
+    <LinearLayout
+        android:id="@+id/categoryTabs"
+        android:layout_below="@id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/btnAll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="전체"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:background="#F8F8F8"
+            android:textColor="#000000"
+            style="@null" />
+
+        <Button
+            android:id="@+id/btnOuter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="아우터"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:background="#F8F8F8"
+            android:textColor="#000000"
+            style="@null" />
+
+        <Button
+            android:id="@+id/btnTop"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="상의"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:background="#F8F8F8"
+            android:textColor="#000000"
+            style="@null" />
+
+        <Button
+            android:id="@+id/btnBottom"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="하의"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:background="#F8F8F8"
+            android:textColor="#000000"
+            style="@null" />
+
+        <Button
+            android:id="@+id/btnShoes"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:text="신발"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:background="#F8F8F8"
+            android:textColor="#000000"
+            style="@null" />
+    </LinearLayout>
+
+    <!-- 옷 이미지 목록: RecyclerView로 교체 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerClothes"
+        android:layout_below="@id/categoryTabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp" />
+
+</RelativeLayout>
