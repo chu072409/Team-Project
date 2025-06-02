@@ -28,6 +28,10 @@ public class BodyTypeSettingActivity extends AppCompatActivity {
         btnSave = findViewById(R.id.btn_save);
         textBmiResult = findViewById(R.id.text_bmi_result);
 
+        // 뒤로가기 추가
+        ImageButton btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(v -> finish());
+
         // Spinner 어댑터 설정
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bodyTypes);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
