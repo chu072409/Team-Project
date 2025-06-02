@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Weather"
         tools:targetApi="31">
         <activity
-            android:name=".view.HomeActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,13 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.example.weather.view.SettingActivity" />
-        <activity android:name="com.example.weather.view.ProfileEditActivity" />
-        <activity android:name="com.example.weather.view.NotificationSettingActivity" />
-        <activity android:name=".view.StylePreferenceActivity" />
-        <activity android:name=".view.BodyTypeSettingActivity" />
-
     </application>
 
 </manifest>

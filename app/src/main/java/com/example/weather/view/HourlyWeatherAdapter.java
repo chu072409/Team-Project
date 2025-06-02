@@ -32,13 +32,6 @@ public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdap
         return new HourlyViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull HourlyViewHolder holder, int position) {
-        HourlyWeather item = hourlyList.get(position);
-        holder.hourText.setText(item.getTime());
-        holder.hourTemp.setText(item.getTemperature() + "°");
-        holder.hourIcon.setImageResource(WeatherUtils.getWeatherSymbolResource(item.getIconCode()));
-    }
 
     @Override
     public int getItemCount() {
@@ -50,9 +43,8 @@ public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdap
         this.hourlyList = newData;
         notifyDataSetChanged();
     }
-
     static class HourlyViewHolder extends RecyclerView.ViewHolder {
-        TextView hourText, hourTemp;
+        TextView hourText, hourTemp, hourDesc;
         ImageView hourIcon;
 
         HourlyViewHolder(View itemView) {
@@ -60,6 +52,17 @@ public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdap
             hourText = itemView.findViewById(R.id.hourText);
             hourTemp = itemView.findViewById(R.id.hourTemp);
             hourIcon = itemView.findViewById(R.id.hourIcon);
+            hourDesc = itemView.findViewById(R.id.hourDesc); // ← 추가
         }
     }
+
+    @Override
+    public void onBindViewHolder(@NonNull HourlyViewHolder holder, int position) {
+        HourlyWeather item = hourlyList.get(position);
+        holder.hourText.setText(item.getTime());
+        holder.hourTemp.setText(item.getTemperature() + "°");
+        holder.hourIcon.setImageResource(WeatherUtils.getWeatherSymbolResource(item.getIconCode()));
+        holder.hourDesc.setText(item.getWeatherDescription()); // ← 추가
+    }
+
 }
