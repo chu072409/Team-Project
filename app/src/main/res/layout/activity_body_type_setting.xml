@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFF4EB">
+    android:background="#E0F7FA"> <!-- 밝은 하늘색 배경 -->
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,8 +23,7 @@
             android:clickable="true"
             android:focusable="true"
             android:layout_marginBottom="16dp"
-            app:tint="#FF8C00" />
-
+            app:tint="#0277BD" /> <!-- 딥 블루 하늘색 -->
 
         <!-- 체형 카드 -->
         <androidx.cardview.widget.CardView
@@ -33,7 +32,7 @@
             android:layout_marginBottom="24dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="#FFF8F0">
+            app:cardBackgroundColor="#B3E5FC"> <!-- 중간 밝기 하늘색 -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,25 +44,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🌿 체형 선택"
+                    android:text="☁️ 체형 선택"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#444444"
+                    android:textColor="#01579B"
                     android:layout_marginBottom="8dp" />
 
                 <Spinner
                     android:id="@+id/spinner_body_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#FFCC99" />
+                    android:backgroundTint="#4FC3F7" /> <!-- 버튼형 하늘색 -->
 
                 <!-- 키/몸무게 입력 라벨 -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="📏 또는 키와 몸무게 입력"
+                    android:text="🌈 키와 몸무게 입력"
                     android:textSize="16sp"
-                    android:textColor="#666666"
+                    android:textColor="#0277BD"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="8dp" />
 
@@ -76,8 +75,8 @@
                     android:inputType="numberDecimal"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
-                    android:textColor="#444444"
-                    android:textColorHint="#AAAAAA"
+                    android:textColor="#01579B"
+                    android:textColorHint="#81D4FA"
                     android:layout_marginBottom="12dp" />
 
                 <!-- 몸무게 입력 -->
@@ -89,8 +88,8 @@
                     android:inputType="numberDecimal"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
-                    android:textColor="#444444"
-                    android:textColorHint="#AAAAAA" />
+                    android:textColor="#01579B"
+                    android:textColorHint="#81D4FA" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -99,7 +98,7 @@
             android:id="@+id/btn_calculate_bmi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BMI 계산"
+            android:text="🌤️ BMI 계산"
             android:background="@drawable/rounded_button"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
@@ -112,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="#444444"
+            android:textColor="#01579B"
             android:textSize="16sp"
             android:layout_marginBottom="24dp" />
 
@@ -121,7 +120,7 @@
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="저장"
+            android:text="🌦️ 저장"
             android:background="@drawable/rounded_button"
             android:textColor="#FFFFFF"
             android:textStyle="bold"

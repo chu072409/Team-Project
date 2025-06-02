@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF4EB"
+    android:background="#E6F7FF"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -23,18 +23,18 @@
             android:clickable="true"
             android:focusable="true"
             android:layout_marginBottom="16dp"
-            app:tint="#FF8C00" />
+            app:tint="#4DA6FF" />
 
         <TextView
             android:text="선호 스타일을 선택하세요"
             android:textSize="18sp"
-            android:textColor="#444444"
+            android:textColor="#2E5D7B"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp" />
 
-        <!-- 캐주얼 항목 (체크박스 + 이미지 + 설명) -->
+        <!-- 캐주얼 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,8 +46,8 @@
                 android:id="@+id/check_casual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="캐주얼"
-                android:textColor="#555555" />
+                android:text="🌤 캐주얼"
+                android:textColor="#3B6E8F" />
 
             <ImageView
                 android:id="@+id/image_casual"
@@ -62,13 +62,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="편하고 일상적인 스타일"
-                android:textColor="#666666"
+                android:textColor="#5F8FA0"
                 android:textSize="14sp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone" />
         </LinearLayout>
 
-        <!-- 스포티 스타일 항목 -->
+        <!-- 스포티 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,8 +80,8 @@
                 android:id="@+id/check_sporty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="스포티"
-                android:textColor="#555555" />
+                android:text="💨 스포티"
+                android:textColor="#3B6E8F" />
 
             <ImageView
                 android:id="@+id/image_sporty"
@@ -96,12 +96,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="활동적이고 에너지 넘치는 스타일"
-                android:textColor="#666666"
+                android:textColor="#5F8FA0"
                 android:textSize="14sp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone" />
         </LinearLayout>
-        <!-- 포멀 스타일 항목 -->
+
+        <!-- 포멀 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,8 +114,8 @@
                 android:id="@+id/check_formal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="포멀"
-                android:textColor="#555555" />
+                android:text="🌥 포멀"
+                android:textColor="#3B6E8F" />
 
             <ImageView
                 android:id="@+id/image_formal"
@@ -129,12 +130,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="격식 있고 단정한 스타일"
-                android:textColor="#666666"
+                android:textColor="#5F8FA0"
                 android:textSize="14sp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone" />
         </LinearLayout>
-        <!-- 스트릿 스타일 항목 -->
+
+        <!-- 스트릿 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -146,8 +148,8 @@
                 android:id="@+id/check_street"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="스트릿"
-                android:textColor="#555555" />
+                android:text="🌪 스트릿"
+                android:textColor="#3B6E8F" />
 
             <ImageView
                 android:id="@+id/image_street"
@@ -162,12 +164,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="자유롭고 개성 넘치는 스타일"
-                android:textColor="#666666"
+                android:textColor="#5F8FA0"
                 android:textSize="14sp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone" />
         </LinearLayout>
-        <!-- 빈티지 스타일 항목 -->
+
+        <!-- 빈티지 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -179,8 +182,8 @@
                 android:id="@+id/check_vintage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="빈티지"
-                android:textColor="#555555" />
+                android:text="🌦 빈티지"
+                android:textColor="#3B6E8F" />
 
             <ImageView
                 android:id="@+id/image_vintage"
@@ -195,18 +198,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="복고풍의 감성을 살린 스타일"
-                android:textColor="#666666"
+                android:textColor="#5F8FA0"
                 android:textSize="14sp"
                 android:layout_marginStart="8dp"
                 android:visibility="gone" />
         </LinearLayout>
+
+        <!-- 저장 버튼 -->
         <Button
             android:id="@+id/btn_save"
-            android:text="저장"
+            android:text="🌈 저장"
             android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="#4DA6FF"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:padding="12dp"/>
