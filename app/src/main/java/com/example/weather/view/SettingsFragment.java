@@ -10,9 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.weather.view.ProfileEditFragment;
-import com.example.weather.view.NotificationSettingFragment;
-
 import com.example.weather.R;
 
 public class SettingsFragment extends Fragment {
@@ -23,7 +20,7 @@ public class SettingsFragment extends Fragment {
     private LinearLayout btnStylePreferenceSetting;
 
     public SettingsFragment() {
-
+        // Required empty public constructor
     }
 
     @Nullable
@@ -31,7 +28,7 @@ public class SettingsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_basic_settings, container, false); // 기존 설정 레이아웃 사용
+        return inflater.inflate(R.layout.activity_basic_settings, container, false);
     }
 
     @Override
@@ -39,12 +36,10 @@ public class SettingsFragment extends Fragment {
                               @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         btnProfileEdit = view.findViewById(R.id.btn_profile_edit);
         btnNotificationSetting = view.findViewById(R.id.btn_notification_setting);
         btnBodyTypeSetting = view.findViewById(R.id.btn_body_setting);
         btnStylePreferenceSetting = view.findViewById(R.id.btn_style_setting);
-
 
         btnProfileEdit.setOnClickListener(v ->
                 requireActivity().getSupportFragmentManager()
@@ -54,7 +49,6 @@ public class SettingsFragment extends Fragment {
                         .commit()
         );
 
-
         btnNotificationSetting.setOnClickListener(v ->
                 requireActivity().getSupportFragmentManager()
                         .beginTransaction()
@@ -63,6 +57,20 @@ public class SettingsFragment extends Fragment {
                         .commit()
         );
 
+        btnBodyTypeSetting.setOnClickListener(v ->
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new BodyTypeSettingFragment())
+                        .addToBackStack(null)
+                        .commit()
+        );
 
+        btnStylePreferenceSetting.setOnClickListener(v ->
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new StylePreferenceSettingFragment())
+                        .addToBackStack(null)
+                        .commit()
+        );
     }
 }

@@ -1,44 +1,56 @@
 package com.example.weather.view;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.*;
-import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.example.weather.R;
 
-public class BodyTypeSettingActivity extends AppCompatActivity {
+public class BodyTypeSettingFragment extends Fragment {
 
-    Spinner spinnerBodyType;
-    EditText editHeight, editWeight;
-    Button btnCalculateBmi, btnSave;
-    TextView textBmiResult;
+    private Spinner spinnerBodyType;
+    private EditText editHeight, editWeight;
+    private Button btnCalculateBmi, btnSave;
+    private TextView textBmiResult;
+    private ImageButton btnBack;
 
-    String[] bodyTypes = {"마름", "보통", "통통"};
+    private final String[] bodyTypes = {"마름", "보통", "통통"};
+
+    public BodyTypeSettingFragment() {}
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.activity_body_type_setting, container, false);
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_body_type_setting);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        spinnerBodyType = findViewById(R.id.spinner_body_type);
-        editHeight = findViewById(R.id.edit_height);
-        editWeight = findViewById(R.id.edit_weight);
-        btnCalculateBmi = findViewById(R.id.btn_calculate_bmi);
-        btnSave = findViewById(R.id.btn_save);
-        textBmiResult = findViewById(R.id.text_bmi_result);
+        spinnerBodyType = view.findViewById(R.id.spinner_body_type);
+        editHeight = view.findViewById(R.id.edit_height);
+        editWeight = view.findViewById(R.id.edit_weight);
+        btnCalculateBmi = view.findViewById(R.id.btn_calculate_bmi);
+        btnSave = view.findViewById(R.id.btn_save);
+        textBmiResult = view.findViewById(R.id.text_bmi_result);
+        btnBack = view.findViewById(R.id.btn_back);
 
-        // 뒤로가기 추가
-        ImageButton btnBack = findViewById(R.id.btn_back);
-        btnBack.setOnClickListener(v -> finish());
+        Context context = requireContext();
 
-        // Spinner 어댑터 설정
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, bodyTypes);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(context, android.R.layout.simple_spinner_item, bodyTypes);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerBodyType.setAdapter(adapter);
 
-        // 저장된 값 불러오기
-        SharedPreferences prefs = getSharedPreferences("user_profile", MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences("user_profile", Context.MODE_PRIVATE);
         String savedBodyType = prefs.getString("body_type", "");
         editHeight.setText(prefs.getString("height", ""));
         editWeight.setText(prefs.getString("weight", ""));
@@ -48,13 +60,12 @@ public class BodyTypeSettingActivity extends AppCompatActivity {
             if (index >= 0) spinnerBodyType.setSelection(index);
         }
 
-        // BMI 계산 버튼 클릭 시
         btnCalculateBmi.setOnClickListener(v -> {
             String heightStr = editHeight.getText().toString();
             String weightStr = editWeight.getText().toString();
 
             if (heightStr.isEmpty() || weightStr.isEmpty()) {
-                Toast.makeText(this, "키와 몸무게를 모두 입력해주세요", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "키와 몸무게를 모두 입력해주세요", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -67,12 +78,10 @@ public class BodyTypeSettingActivity extends AppCompatActivity {
 
             textBmiResult.setText(bmiText + " → 추천 체형: " + bodyType);
 
-            // Spinner에서 자동 선택
             int index = java.util.Arrays.asList(bodyTypes).indexOf(bodyType);
             if (index >= 0) spinnerBodyType.setSelection(index);
         });
 
-        // 저장 버튼 클릭 시
         btnSave.setOnClickListener(v -> {
             String selectedType = spinnerBodyType.getSelectedItem().toString();
             String height = editHeight.getText().toString();
@@ -84,9 +93,12 @@ public class BodyTypeSettingActivity extends AppCompatActivity {
             editor.putString("weight", weight);
             editor.apply();
 
-            Toast.makeText(this, "체형이 저장되었습니다", Toast.LENGTH_SHORT).show();
-            finish();
+            Toast.makeText(context, "체형이 저장되었습니다", Toast.LENGTH_SHORT).show();
+
+            requireActivity().getSupportFragmentManager().popBackStack();
         });
+
+        btnBack.setOnClickListener(v -> requireActivity().getSupportFragmentManager().popBackStack());
     }
 
     private String getBodyTypeFromBmi(double bmi) {

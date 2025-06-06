@@ -2,218 +2,228 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6F7FF"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#F9F9F9">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="24dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="#F9F9F9">
 
-        <!-- 뒤로 가기 버튼 -->
+        <!-- 뒤로가기 버튼 -->
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:padding="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_back"
-            android:contentDescription="뒤로 가기"
-            android:clickable="true"
-            android:focusable="true"
-            android:layout_marginBottom="16dp"
-            app:tint="#4DA6FF" />
-
-        <TextView
-            android:text="선호 스타일을 선택하세요"
-            android:textSize="18sp"
-            android:textColor="#2E5D7B"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="뒤로가기"
+            android:tint="#666666"
             android:layout_marginBottom="16dp" />
 
-        <!-- 캐주얼 -->
-        <LinearLayout
+        <!-- 선호 스타일 텍스트 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선호 스타일"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 라디오 그룹으로 스타일 단일 선택 -->
+        <RadioGroup
+            android:id="@+id/style_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/check_casual"
-                android:layout_width="wrap_content"
+            <!-- 캐주얼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🌤 캐주얼"
-                android:textColor="#3B6E8F" />
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:id="@+id/image_casual"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/style_casual"
-                android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/radio_casual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="캐주얼"
+                    android:textColor="#333333"
+                    android:buttonTint="#666666" />
 
-            <TextView
-                android:id="@+id/text_casual_desc"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/image_casual"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/style_casual" />
+
+                <TextView
+                    android:id="@+id/text_casual_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="편안하고 데일리한 스타일"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 스포티 스타일 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="편하고 일상적인 스타일"
-                android:textColor="#5F8FA0"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"
-                android:visibility="gone" />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
-        <!-- 스포티 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+                <RadioButton
+                    android:id="@+id/radio_sporty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="스포티"
+                    android:textColor="#333333"
+                    android:buttonTint="#666666" />
 
-            <CheckBox
-                android:id="@+id/check_sporty"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/image_sporty"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/style_sporty" />
+
+                <TextView
+                    android:id="@+id/text_sporty_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="활동적인 운동 스타일"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 포멀 스타일 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="💨 스포티"
-                android:textColor="#3B6E8F" />
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:id="@+id/image_sporty"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/style_sporty"
-                android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/radio_formal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포멀"
+                    android:textColor="#333333"
+                    android:buttonTint="#666666" />
 
-            <TextView
-                android:id="@+id/text_sporty_desc"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/image_formal"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/style_formal" />
+
+                <TextView
+                    android:id="@+id/text_formal_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="격식 있는 깔끔한 스타일"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 스트릿 스타일 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="활동적이고 에너지 넘치는 스타일"
-                android:textColor="#5F8FA0"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"
-                android:visibility="gone" />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
-        <!-- 포멀 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+                <RadioButton
+                    android:id="@+id/radio_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="스트릿"
+                    android:textColor="#333333"
+                    android:buttonTint="#666666" />
 
-            <CheckBox
-                android:id="@+id/check_formal"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/image_street"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/style_street" />
+
+                <TextView
+                    android:id="@+id/text_street_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="도시적인 자유분방한 스타일"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 빈티지 스타일 -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="🌥 포멀"
-                android:textColor="#3B6E8F" />
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:id="@+id/image_formal"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/style_formal"
-                android:visibility="gone" />
+                <RadioButton
+                    android:id="@+id/radio_vintage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="빈티지"
+                    android:textColor="#333333"
+                    android:buttonTint="#666666" />
 
-            <TextView
-                android:id="@+id/text_formal_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="격식 있고 단정한 스타일"
-                android:textColor="#5F8FA0"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"
-                android:visibility="gone" />
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/image_vintage"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/style_vintage" />
 
-        <!-- 스트릿 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+                <TextView
+                    android:id="@+id/text_vintage_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="복고풍의 클래식한 스타일"
+                    android:textColor="#666666"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/check_street"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌪 스트릿"
-                android:textColor="#3B6E8F" />
 
-            <ImageView
-                android:id="@+id/image_street"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/style_street"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/text_street_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="자유롭고 개성 넘치는 스타일"
-                android:textColor="#5F8FA0"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"
-                android:visibility="gone" />
-        </LinearLayout>
-
-        <!-- 빈티지 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
-
-            <CheckBox
-                android:id="@+id/check_vintage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌦 빈티지"
-                android:textColor="#3B6E8F" />
-
-            <ImageView
-                android:id="@+id/image_vintage"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/style_vintage"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/text_vintage_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="복고풍의 감성을 살린 스타일"
-                android:textColor="#5F8FA0"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp"
-                android:visibility="gone" />
-        </LinearLayout>
+        </RadioGroup>
 
         <!-- 저장 버튼 -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_save"
-            android:text="🌈 저장"
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#4DA6FF"
+            android:text="저장"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:padding="12dp"/>
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#333333"
+            android:padding="12dp"
+            android:layout_marginBottom="32dp"
+            />
     </LinearLayout>
 </ScrollView>

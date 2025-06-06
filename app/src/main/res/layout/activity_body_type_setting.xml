@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0F7FA"> <!-- 밝은 하늘색 배경 -->
+    android:background="#FFFFFF"> <!-- 배경: 흰색 -->
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,25 +14,25 @@
         <!-- 뒤로 가기 버튼 -->
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="108dp"
-            android:layout_height="108dp"
-            android:padding="16dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_arrow_back"
             android:contentDescription="뒤로 가기"
             android:clickable="true"
             android:focusable="true"
             android:layout_marginBottom="16dp"
-            app:tint="#0277BD" /> <!-- 딥 블루 하늘색 -->
+            app:tint="#666666" /> <!-- 아이콘: 진한 회색 -->
 
         <!-- 체형 카드 -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="8dp"
-            app:cardBackgroundColor="#B3E5FC"> <!-- 중간 밝기 하늘색 -->
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#F5F5F5"> <!-- 카드 배경: 연한 회색 -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,25 +44,25 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="☁️ 체형 선택"
+                    android:text="체형 선택"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#01579B"
+                    android:textColor="#444444"
                     android:layout_marginBottom="8dp" />
 
                 <Spinner
                     android:id="@+id/spinner_body_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#4FC3F7" /> <!-- 버튼형 하늘색 -->
+                    android:backgroundTint="#CCCCCC" /> <!-- 중간 회색 -->
 
                 <!-- 키/몸무게 입력 라벨 -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🌈 키와 몸무게 입력"
+                    android:text="키와 몸무게 입력"
                     android:textSize="16sp"
-                    android:textColor="#0277BD"
+                    android:textColor="#555555"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="8dp" />
 
@@ -75,8 +75,8 @@
                     android:inputType="numberDecimal"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
-                    android:textColor="#01579B"
-                    android:textColorHint="#81D4FA"
+                    android:textColor="#333333"
+                    android:textColorHint="#AAAAAA"
                     android:layout_marginBottom="12dp" />
 
                 <!-- 몸무게 입력 -->
@@ -88,18 +88,19 @@
                     android:inputType="numberDecimal"
                     android:background="@drawable/rounded_edittext"
                     android:padding="12dp"
-                    android:textColor="#01579B"
-                    android:textColorHint="#81D4FA" />
+                    android:textColor="#333333"
+                    android:textColorHint="#AAAAAA" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- BMI 계산 버튼 -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_calculate_bmi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🌤️ BMI 계산"
+            android:text="BMI 계산"
             android:background="@drawable/rounded_button"
+            android:backgroundTint="#333333"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
@@ -111,17 +112,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="#01579B"
+            android:textColor="#333333"
             android:textSize="16sp"
             android:layout_marginBottom="24dp" />
 
         <!-- 저장 버튼 -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🌦️ 저장"
+            android:text="저장"
             android:background="@drawable/rounded_button"
+            android:backgroundTint="#333333"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:padding="12dp" />
