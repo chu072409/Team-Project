@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="#F8F8F8">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#DDDDDD"
+        android:scaleType="centerCrop" />
+
+    <!-- 즐겨찾기 별 아이콘 -->
+    <ImageView
+        android:id="@+id/favoriteStar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="6dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_star" />
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:paddingTop="4dp"
+        android:layout_below="@id/imageView" />
+</RelativeLayout>
